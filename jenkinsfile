@@ -12,7 +12,7 @@ url: 'https://github.com/Karnatakabank-app/maven-web-application.git'
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
-
+/*
 //Execute SonarQube Report
 stage('ExecuteSonarQubeReport'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -29,5 +29,5 @@ sshagent(['8d00c1d0-2ce3-435f-8abf-6b287caf87c6']) {
 sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.42.45:/opt/apache-tomcat-9.0.71/webapps"
 }
 }
-
+*/
 }//node closing
